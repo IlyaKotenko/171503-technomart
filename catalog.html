@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+      <meta charset="utf-8">
+      <title>HTML Academy: Техномарт</title>
+      <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
       <header class="page-header">
-          <a href="#" class="logo">Техномарт</a>
           <div class="shop-service-menu">
-             <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label for="main-search=field">Поиск:</label>
-                  <input type="search" name="search-field" id="main-search=field">
-                  <input type="submit" value="Поиск">
+              <a href="#" class="logo-header">Техномарт</a>
+              <form class="site-search" name="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <button type="submit">Поиск</button>
+                  <label for="main-search-field">Поиск:</label>
+                  <input type="search" name="search-field" id="main-search-field">
               </form>
-             <a href="#">Закладки:</a>
-             <a href="#">Корзина:</a>
-             <a href="#">Оформить заказ</a>
+              <ul class="shop-links">
+                <li><a class="bookmark" href="#">Закладки:</a></li>
+                <li><a class="full-busket" href="#">Корзина: 10</a></li>
+                <li><a class="submit-order" href="#">Оформить заказ</a></li>
+              </ul>
           </div>
           <p class="site-title">Интернет-магазин строительных матриеалов и инструментов для ремонта</p>
           <p class="header-contacts"><span class="phone-number" aria-label="Контактный телефон">+7(812)555-05-55</span><span class="adress" aria-label="Адрес офиса">г. Санкт-Петербург, ул Б. Конюшенная, д. 19/8</span></p>
           <ul class="authorized-user-menu">
               <li class="user-profile"><a href="#">Равшан Джамшутович</a></li>
-              <li><a href="#">Мои заказы</a></li>
-              <li><a href="#">Личный кабинет</a></li>
+              <li><a class="my-offers" href="#">Мои заказы</a></li>
+              <li><a class="my-account" href="#">Личный кабинет</a></li>
           </ul>
           <ul class="main-menu">
               <li><a href="#">Главная</a></li>
@@ -43,51 +48,12 @@
               </ul>
               <h1>Перфораторы</h1>
           </header>
-          <aside>
-              <h3>Фильтр</h3>
-              <form name="items-filter" action="https://echo.htmlacademy.ru" method="get">
-                     <fieldset>
-                         <legend>Цена:</legend>
-                  <input type="range" name="price" min="0" max="30000">
-                  <output name="min-price">0</output>
-                  <output name="max-price">30000</output>
-                      </fieldset>
-                  <fieldset>
-                      <legend>Производители:</legend>
-                     <label>
-                        <input type="checkbox" name="brand" value="brand-bosch">Bosch
-                     </label>
-                      <label>
-                        <input type="checkbox" name="brand" value="brand-interskol">Интерскол
-                     </label>
-                      <label>
-                        <input type="checkbox" name="brand" value="brand-makita">Makita
-                     </label>
-                      <label>
-                        <input type="checkbox" name="brand" value="brand-dewalt">Dewalt
-                     </label>
-                      <label>
-                        <input type="checkbox" name="brand" value="brand-hitachi">Hitachi
-                     </label>
-                  </fieldset>
-                <fieldset>
-                    <legend>Питание:</legend>
-                    <label>
-                      <input type="radio" name="energy-source" value="energy-source-battary">Аккумуляторные
-                    </label>
-                    <label>
-                      <input type="radio" name="energy-source" value="energy-source-ac">Сетевые
-                    </label>
-                </fieldset>
-                  <input type="submit" value="Показать">
-              </form>
-          </aside>
           <section class="items-catalog">
               <div class="sorting-items">
                   <h3>Сортировка:</h3>
-                  <a class="sorting-buttons price-sorting" href="#">По цене</a>
-                  <a class="sorting-buttons type-sorting" href="#">По типу</a>
-                  <a class="sorting-buttons function-sorting" href="#">По функционалу</a>
+                  <a class="sorting-buttons current-sorting" href="#">По цене</a>
+                  <a class="sorting-buttons" href="#">По типу</a>
+                  <a class="sorting-buttons" href="#">По функционалу</a>
                   <a class="sorting-buttons up-arrow" href="#"></a>
                   <a class="sorting-buttons down-arrow" href="#"></a>
               </div>
@@ -144,7 +110,7 @@
           </div> 
           </section>
           <ul class="catalog-pagination" aria-label="Страницы каталога">
-              <li><a href="#">1</a></li>
+              <li><a class="current-page" href="#">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
               <li><a href="#">Следующая</a></li>
@@ -155,9 +121,48 @@
 Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
           </section>
           </main>
+          <aside class="sidebar">
+              <h3>Фильтр:</h3>
+              <form name="items-filter" action="https://echo.htmlacademy.ru" method="get">
+                     <fieldset>
+                         <legend>Цена:</legend>
+                  <input type="range" name="price" min="0" max="30000">
+                  <output name="min-price">0</output>
+                  <output name="max-price">30000</output>
+                      </fieldset>
+                  <fieldset>
+                      <legend>Производители:</legend>
+                     <label>
+                        <input type="checkbox" name="brand" value="brand-bosch">Bosch
+                     </label>
+                      <label>
+                        <input type="checkbox" name="brand" value="brand-interskol">Интерскол
+                     </label>
+                      <label>
+                        <input type="checkbox" name="brand" value="brand-makita">Makita
+                     </label>
+                      <label>
+                        <input type="checkbox" name="brand" value="brand-dewalt">Dewalt
+                     </label>
+                      <label>
+                        <input type="checkbox" name="brand" value="brand-hitachi">Hitachi
+                     </label>
+                  </fieldset>
+                <fieldset>
+                    <legend>Питание:</legend>
+                    <label>
+                      <input type="radio" name="energy-source" value="energy-source-battary">Аккумуляторные
+                    </label>
+                    <label>
+                      <input type="radio" name="energy-source" value="energy-source-ac">Сетевые
+                    </label>
+                </fieldset>
+                  <input type="submit" value="Показать">
+              </form>
+          </aside>
       <footer class="page-footer">
-          <a class="logo" href="#">Техномарт</a>
-          <ul>
+          <a class="logo-footer" href="#">Техномарт</a>
+          <ul class="footer-menu">
               <li><a href="#">Компания</a></li>
               <li><a href="#">Новости</a></li>
               <li><a>Каталог</a></li>
