@@ -4,12 +4,24 @@ html, body {
 }
 
 body {
+    min-width: 960px;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: #ffffff;
     background-color: #ffffff;
     
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
@@ -44,24 +56,32 @@ a.global-button:active {
 .footer-categories,
 .social-buttons,
 .breadcrumbs,
-.authorized-user-menu
+.authorized-user-menu,
+.offer-categories
 {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 
 /* Header Style Start */
 .page-header {
-      background-color: #f3f7f9;
-      font-size: 17px;
-      line-height: 17px;
+    width: 100%;
+    background-color: #f3f7f9;
+    font-size: 17px;
+    line-height: 17px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 a.logo-header {
+    width: 220px;
     font-size: 24px;
     line-height: 24px;
     background-color: #ee3643;
     text-transform: uppercase;
+    margin-right: 10px;
 }
 
 a.logo-header:hover,
@@ -85,10 +105,32 @@ a.logo-header:active {
     background-color: #ffffff;
 }
 
-.shop-service-menu {
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.shop-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 46px;
     background-color: #293449;
 }
 
+.shop-navigation {
+    display: flex;
+    background-color: #293449;
+}
+
+.shop-navigation .shop-links {
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.shop-links li {
+    width: 150px;
+}
 
 .shop-links a {
     color: #ffffff;
@@ -123,12 +165,34 @@ a.submit-order:active {
     background-color: 
 }
 
+.user-navigation {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.user-navigation .site-title, 
+.user-navigation .header-contacts {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.user-navigation .user-menu {
+    width: 300px;
+    margin-left: auto;
+    
+}
+
 .site-title {
     font-size: 16px;
     font-style: italic;
     line-height: 23px;
     color: #ee3643;
     
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: column;
 }
 
 .header-contacts .phone-number {
@@ -141,6 +205,21 @@ a.submit-order:active {
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
+}
+
+.user-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-menu .login {
+    margin-right: 10px;
+    padding: 0 25px;
+}
+
+.user-menu .signup {
+    margin-right: auto;
+    padding: 0 25px;
 }
 
 .user-menu a,
@@ -162,6 +241,8 @@ a.submit-order:active {
 }
 
 .main-menu {
+    display: flex;
+    justify-content: space-around;
     background-color: #32425c;
 }
 
@@ -181,6 +262,36 @@ a.submit-order:active {
 
 /* Header Style End */
 
+.categories-slider {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 53px;
+}
+
+.categories-slider .main-categories {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin-bottom: 20px;
+}
+
+.categories-slider .offer-categories {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    flex-basis: 150px;
+
+}
+
+.main-categories li,
+.offer-categories li {
+    width: 300px;
+}
+
+.offer-categories .sale-category {
+    margin-bottom: 20px;
+}
+
 .main-categories .materials-category {
     background-color: #ffbf47;
     
@@ -196,31 +307,26 @@ a.submit-order:active {
     
 }
 
-.main-categories .sale-category {
+.offer-categories .sale-category {
     background-color: #8ed78f;
     
 }
 
-.main-categories .delivery-category {
+.offer-categories .delivery-category {
     background-color: #ffc047;
     
 }
 
-.main-categories h3 {
+.main-categories h3,
+.offer-categories h3{
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
     
 }
 
-.main-categories a {
-    font-size: 14px;
-    line-height: 18px;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-
-.main-categories a {
+.main-categories a,
+.offer-categories a {
     font-size: 14px;
     line-height: 18px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -228,13 +334,21 @@ a.submit-order:active {
 }
 
 .main-categories a:hover,
-.main-categories a:focus {
+.main-categories a:focus,
+.offer-categories a:hover,
+.offer-categories a:focus {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.main-categories a:active {
+.main-categories a:active,
+.offer-categories a:active {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+.slider {
+    width: 620px;
+}
+
 
 .slider li {
     background-color: #32425c;
@@ -251,18 +365,59 @@ a.submit-order:active {
     line-height: 24px;
 }
 
+.popular-items {
+    margin-bottom: 20px;
+}
+
 .section-header {
     background-color: #f9f5f0;
+    margin-bottom: 20px;
     
 }
 
 .section-header h2 {
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
     color: #32425c;
+    text-transform: uppercase;
+}
+
+.popular-items .items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-catalog .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.items-catalog .item {
+    margin-bottom: 20px;
+}
+
+.catalog-columns {
+    display: flex;
+}
+
+.catalog-columns .sidebar {
+    width: 220px;
+    margin-right: 20px;
+    order: -1;
+}
+
+.sorting-items {
+    display: flex;
+    background-color: #f7f3ec;
+    margin-bottom: 20px;
 }
 
 .item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 220px;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -288,14 +443,32 @@ a.submit-order:active {
 
 .item .price {
     background-color: #ee3643;
+    margin-top: auto;
+}
+.brands-logo-list {
+    min-height: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 85px;
 }
 
 .brands-logo-list li {
+    width: 220px;
+    height: 145px;
     border: 1px solid #eaeaea;
 }
 
 .services {
     background-color: #f4f8f9;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    margin-bottom: 75px;
+}
+
+.services-info {
+    display: flex;
 }
 
 .services h2,
@@ -305,12 +478,14 @@ a.submit-order:active {
 
 .services h2 {
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
     color: #000000;
 }
 
 .services h3 {
     font-size: 36px;
+    font-weight: 400;
     line-height: 36px;
     color: #32425c;
 }
@@ -324,6 +499,10 @@ a.submit-order:active {
 }
 
 .service-list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    margin-right: 20px;
     font-size: 21px;
     font-weight: 700;
     line-height: 30px;
@@ -346,8 +525,35 @@ a.current-service:focus {
     background-color: #ffffff;
 }
 
+.delivery,
+.warranty,
+.credit {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.delivery p,
+.warranty p,
+.credit p {
+    width: 390px;
+}
+
 .company-info {
+    display: flex;
     color: #000000;
+    margin-bottom: 86px;
+}
+
+.company-info .description {
+    width: 620px;
+    margin-right: 20px;
+}
+
+.company-info .contacts {
+    width: 300px;
+    margin-left: auto;
 }
 
 .company-info h2 {
@@ -367,6 +573,34 @@ a.current-service:focus {
     line-height: 24px;
     color: #f3f7f9;
     background-color: #32425c;
+}
+
+.footer-tops {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 380px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-navigation {
+    width: 550px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-categories {
+    display: flex;
+    justify-content: space-around;
 }
 
 a.logo-footer {
@@ -400,7 +634,15 @@ a.logo-footer {
      color: rgba(255, 209, 128, 0.5);
 }
 
+.footer-bottoms-wrapper {
+    width: 100%;
+    background-color: #293449;
+}
+
 .footer-bottoms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
@@ -509,6 +751,7 @@ a.current-sorting {
 }
 
 .catalog-pagination {
+    display: flex;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
