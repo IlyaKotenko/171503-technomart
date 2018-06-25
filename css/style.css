@@ -242,12 +242,12 @@ a.submit-order:active {
 
 .main-menu {
     display: flex;
-    justify-content: space-around;
     background-color: #32425c;
 }
 
 .main-menu a {
-    background-color: inherit;
+    padding: 10px 34px;
+    background-color: #32425c;
 }
 
 .main-menu a:hover,
@@ -370,8 +370,17 @@ a.submit-order:active {
 }
 
 .section-header {
+    display: flex;
     background-color: #f9f5f0;
     margin-bottom: 20px;
+    padding: 0 25px;
+    
+}
+
+.section-header .global-button {
+    margin-left: auto;
+    align-self: center;
+    padding: 10px 55px;
     
 }
 
@@ -415,8 +424,6 @@ a.submit-order:active {
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
     flex-basis: 220px;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
@@ -442,8 +449,8 @@ a.submit-order:active {
 }
 
 .item .price {
+    display: block;
     background-color: #ee3643;
-    margin-top: auto;
 }
 .brands-logo-list {
     min-height: 310px;
