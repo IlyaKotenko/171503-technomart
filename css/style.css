@@ -63,8 +63,6 @@ a.global-button:active {
     width: 100%;
 }
 
-
-
 .shop-links,
 .user-menu,
 .main-menu,
@@ -227,16 +225,16 @@ a.submit-order:active {
 }
 
 .basket::before,
-.full-basket::before {
+.full-basket::before,
+.actions .buy::before {
     content: "";
+    position: absolute;
     width: 17px;
     height: 16px;
     left: 19px;
-    position: absolute;
     background-image: url(../img/cart-icon.svg);
     background-repeat: no-repeat;
-    opacity: 0.3;
-    
+    opacity: 0.3;   
 }
 
 .bookmark:hover::before,
@@ -255,7 +253,7 @@ a.submit-order:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 35px;
+    margin-bottom: 39px;
 }
 
 
@@ -269,7 +267,7 @@ a.submit-order:active {
     color: #ee3643;
     margin: 0;
     margin-right: 20px;
-    padding: 3px 54px;
+    padding: 3px 48px 0 52px;
     
 }
 
@@ -380,6 +378,7 @@ a.submit-order:active {
 }
 
 .user-profile-menu li {
+    position: relative;
     width: 300px;
     padding: 0;
     margin: 0;
@@ -403,7 +402,7 @@ a.profile {
     width: 20px;
     height: 18px;
     left: 14px;
-    bottom: 14px
+    bottom: 13px
 }
 
 a.logout {
@@ -432,12 +431,11 @@ a.logout:active polygon {
 
 a.my-offers,
 a.my-account {
+    position: absolute;
     display: inline-block;
     font-size: 16px;
     line-height: 18px;
-    margin-left: 20px;
-    margin-right: 16px;
-    margin-top: 10px;
+    top: 10px;
     color: #32425c;
     text-decoration: underline;
     background: none;
@@ -457,6 +455,8 @@ a.my-account:active {
 
 a.my-offers {
     position: relative;
+    margin-left: 19px;
+    margin-right: 31px;
 }
 
 a.my-offers::after {
@@ -464,7 +464,7 @@ a.my-offers::after {
     position: absolute;
     width: 4px;
     height: 4px;
-    right: -16px;
+    right: -19px;
     top: 7px;
     background-color: #32425c;
     border-radius: 50%;
@@ -477,18 +477,47 @@ a.my-offers::after {
     background-color: #32425c;
 }
 
-.main-menu li {
-    flex-grow: 1;
-}
-
 .main-menu a {
     display: block;
     height: 60px;
     box-sizing: border-box;
-    padding: 20px 0px;
+    padding: 20px 29px;
     background-color: #32425c;
-    border-bottom: 5px solid #293449;
     text-align: center;
+    border-bottom: 5px solid #293449;
+}
+
+.main-menu li:nth-child(1) a {
+    padding-left: 52px;
+    padding-right: 33px;
+}
+
+.main-menu li:nth-child(2) a {
+    padding-left: 32px;
+    padding-right: 30px;
+}
+.main-menu li:nth-child(3) a {
+    padding-left: 27px;
+    padding-right: 30px;
+}
+
+.main-menu li:nth-child(4) a {
+    padding-left: 30px;
+    padding-right: 29px;
+}
+
+.main-menu li:nth-child(5) a {
+    padding-left: 30px;
+    padding-right: 31px;
+}
+
+.main-menu li:nth-child(6) a {
+    padding-left: 31px;
+    padding-right: 32px;
+}
+.main-menu li:nth-child(7) a {
+    padding-left: 32px;
+    padding-right: 53px;
 }
 
 .main-menu a:hover,
@@ -722,7 +751,36 @@ a.my-offers::after {
 
 .item:hover .actions {
     display: block;
-    
+}
+
+.actions .buy {
+    position: relative;
+}
+.actions .buy::before {
+    left: 12px;
+}
+.actions .buy:hover {
+    background-color: #5fbb2d;
+    border-top-color: #5fbb2d;
+    border-right-color: #5fbb2d;
+    border-left-color: #5fbb2d;
+}
+
+.actions .buy:active {
+    background-color: #518534;
+    border-color: #518534;
+}
+
+.actions .buy:hover::before {
+    opacity: 1;
+}
+
+.actions .favorite:hover {
+    border-color: #32425c;
+}
+
+.actions .favorite:active {
+    opacity: 0.3;
 }
 
 .catalog-columns {
@@ -745,10 +803,9 @@ a.my-offers::after {
     line-height: 18px;
     border: 1px solid #eaeaea;
     text-align: center;
-
 }
 
-.items .new-item:before {
+.items .new-item::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -758,11 +815,12 @@ a.my-offers::after {
     background: url("../img/new-flag.png");
     background-repeat: no-repeat;
     overflow: hidden;
-    z-index: 10;
+    z-index: 20;
 }
 
 .item img {
-    width: 100%;
+    width: 218px;
+    height: 150px;
     margin-bottom: 25px;
 }
 
@@ -790,14 +848,14 @@ a.my-offers::after {
 .item .price {
     display: inline-block;
     position: relative;
-    padding: 10px 34px;
+    padding: 10px 34px 10px 35px;
     margin-bottom: 20px;
     background-color: #ee3643;
     border-radius: 3px;
     
 }
 
-.item .price:after {
+.item .price::after {
     content: "";
     position: absolute;
     width: 0;
@@ -813,22 +871,23 @@ a.my-offers::after {
     min-height: 310px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    margin-bottom: 85px;
+    margin-bottom: 65px;
 }
 
 .brands-logo-list li {
-    width: 218px;
-    height: 143px;
-    
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.brands-logo-list li:nth-child(4n+4) {
+    margin-right: 0;
 }
 
 .brands-logo-list a {
     display: block;
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 218px;
+    height: 143px;
     border: 1px solid #eaeaea;
 }
 
@@ -844,15 +903,17 @@ a.my-offers::after {
     box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
 }
 
-.brands-logo-list a:active img {
-    opacity: 0.3;
-}
-
 .brands-logo-list img {
     position: absolute;
+    width: 188px;
+    height: 93px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.brands-logo-list a:active img {
+    opacity: 0.3;
 }
 
 .services {
@@ -913,7 +974,7 @@ a.my-offers::after {
     color: #ffffff;
 }
 
-.service-list:after {
+.service-list::after {
     content: "";
     position: absolute;
     width: 10px;
@@ -1039,7 +1100,7 @@ a.current-service:focus {
     margin-left: 37px;
 }
 
-.delivery-company-list li:before {
+.delivery-company-list li::before {
     content: "";
     position: absolute;
     width: 25px;
@@ -1296,7 +1357,7 @@ a.current-service:focus {
     text-transform: uppercase;
 }
 
-.breadcrumbs-link:before {
+.breadcrumbs-link::before {
     content: "";
     position: absolute;
     width: 8px;
@@ -1411,6 +1472,10 @@ a.current-service:focus {
     margin-top: 10px;
 }
 
+.sorting-menu .up-arrow:hover polygon,
+.sorting-menu .down-arrow:hover polygon {
+    fill:#231f20;
+}
 
 .sorting-menu .down-arrow {
     transform: rotate(180deg) translateY(-5px);
