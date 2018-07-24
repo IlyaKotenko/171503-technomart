@@ -108,7 +108,6 @@ a {
 
 a.logo-header {
     width: 220px;
-    height: 42px;
     font-size: 24px;
     line-height: 24px;
     -webkit-box-sizing: border-box;
@@ -124,8 +123,7 @@ a.logo-header {
 
 a.logo-header:hover,
 a.logo-header:focus {
-    background-color: #ca2c37;
-    
+    background-color: #ca2c37;   
 }
 
 a.logo-header:active {
@@ -173,6 +171,7 @@ a.logo-header:active {
     border: none;
     color: #ffffff;
     background-color: #293449;
+    padding: 0;
     padding-left: 48px;
 }
 
@@ -241,10 +240,11 @@ input.search-field:focus + button.search-button {
 .shop-links a {
     display: block;
     position: relative;
+    min-height: 42px;
+    box-sizing: border-box;
     padding: 12px 20px 13px 22px;
     color: #ffffff;
     background-color: #293449;
-    
 }
 
 .shop-links .bookmark {
