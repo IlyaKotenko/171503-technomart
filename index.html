@@ -13,9 +13,16 @@
           <div class="shop-navigation container">
               <a class="logo-header">Техномарт</a>
               <form class="site-search" name="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <button type="submit"><img src="img/icon-search.svg"></button>
-                  <label for="main-search-field">Поиск:</label>
-                  <input type="search" name="search-field" id="main-search-field">
+                  <label class="visually-hidden" for="main-search-field">Поиск:</label>
+                  <input class="search-field" type="search" name="search-field" id="main-search-field" placeholder="Поиск:">
+                  <button type="submit" class="search-button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+	 height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+<g id="Layer_2">
+	<path fill="#ffffff" d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
+		C0,11.643,3.358,15,7.5,15c1.71,0,3.282-0.579,4.544-1.542L15.586,17L17,15.586z M2,7.5C2,4.467,4.467,2,7.5,2
+		C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
+</g>
+</svg></button>
               </form>
               <ul class="shop-links">
                 <li><a class="bookmark" href="#">Закладки: 0</a></li>
@@ -43,7 +50,7 @@
         <ul class="main-menu">
               <li><a>Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Спецпредложения</a></li>
               <li><a href="#">Доставка</a></li>
@@ -63,12 +70,12 @@
               <li class="slider-screen">
                   <span class="slider-title">Дрели</span>
                   <span class="slider-subtitle">Соседям на радость!</span>
-                  <a class="global-button slider-button" href="#">Открыть каталог</a>
+                  <a class="global-button slider-button" href="catalog.html">Открыть каталог</a>
               </li>
               <li class="slider-screen">
                   <span class="slider-title">Перфораторы</span>
                   <span class="slider-subtitle">Настоящие мужские игрушки</span>
-                  <a class="global-button slider-button" href="#">Открыть каталог</a>
+                  <a class="global-button slider-button" href="catalog.html">Открыть каталог</a>
               </li>
           </ul>
           <ul class="offer-categories">
@@ -206,7 +213,7 @@
              <ul class="footer-menu">
                 <li><a href="#">Компания</a></li>
                 <li><a href="#">Новости</a></li>
-                <li><a href="#">Каталог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
@@ -231,28 +238,33 @@
               </div>
           </div>       
       </footer>
-      
-    <!--
-      <section class="modal modal-login">
+      <section class="modal modal-write-us">
         <h2 class="visually-hidden">Напишите нам письмо</h2>
           <form name="contact-form" action="https://echo.htmlacademy.ru" method="post">
-              <label for="user-contact-name">Ваше Имя:</label>
-              <input type="text" name="contact-name" id="user-contact-name" placeholder="Имя Фамилия">
-              <label for="user-contact-email">Ваш e-mail:</label>
-              <input type="email" name="contact-email" id="user-contact-email" placeholder="email@example.com">
-              <label for="user-message-body">Текст письма:</label>
-              <textarea name="message-body" id="user-message-body" placeholder="В свободной форме"></textarea>
-              <button type="submit">Отправить</button>
+              <div class="contact-fields">
+                  <div class="contact-name">
+                      <p><label for="user-contact-name">Ваше Имя:</label></p>
+                      <input type="text" name="contact-name" id="user-contact-name" placeholder="Имя Фамилия" required>
+                  </div>
+                  <div>
+                      <p><label for="user-contact-email">Ваш e-mail:</label></p>
+                      <input type="email" name="contact-email" id="user-contact-email" placeholder="email@example.com" required>
+                  </div>
+              </div>
+              <div class="message-field">
+                  <p><label for="user-message-body">Текст письма:</label></p>
+                  <textarea rows="8" name="message-body" id="user-message-body" placeholder="В свободной форме" required></textarea>
+              </div>
+              <div class="action-buttons">
+                  <button class="global-button send-message" type="submit">Отправить</button>
+              </div>
           </form>
-        <button class="modal-close" aria-label="Закрыть окно">X</button>
+        <button class="modal-close" aria-label="Закрыть окно">Закрыть окно</button>
       </section>
-      
       <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="http://placehold.it/150x100" class="big-map" alt="Карта проезда">
-        <button class="modal-close" aria-label="Закрыть окно">X</button>
+        <img src="img/modal-map.jpg" width="940" height="446" class="big-map" alt="Карта проезда">
+        <button class="modal-close" aria-label="Закрыть окно"></button>
       </section>
-     -->
-      
   </body>
 </html>
