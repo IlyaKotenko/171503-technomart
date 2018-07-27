@@ -815,6 +815,57 @@ a.my-offers::after {
     margin-top: 122px;
 }
 
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-arrow-left,
+.slider-arrow-right {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 31px;
+    top: 120px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    cursor: pointer;
+}
+
+.slider-arrow-right {
+    left: 566px;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+}
+
+.slider-toggles {
+    position: absolute;
+    width: 400px;
+    height: 14px;
+    bottom: 32px;
+    margin-left: 220px;
+    padding-left: 75px;
+    font-size: 0;
+}
+
+.slider-toggles .toggle {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    margin-right: 10px;
+    vertical-align: top;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background-color: #ee3643;
+}
+
 .section-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1167,6 +1218,12 @@ a.my-offers::after {
     color: #000000;
 }
 
+.company-info .delivery-title {
+    padding-right: 135px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 .service-subtitle {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1367,7 +1424,7 @@ a.current-service:focus {
 
 .map-contact-text {
     margin-bottom: 35px;
-    padding-right: 80px;
+    padding-right: 110px;
 }
 
 .map {
@@ -1792,6 +1849,12 @@ a.current-service:focus {
     display: none;
 }
 
+.modal-write-us.active,
+.modal-map.active,
+.modal-added-to-basket.active {
+    display: block;
+}
+
 .breadcrumbs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2208,6 +2271,14 @@ a.current-page {
 .side-energy-filter input[type="radio"]:checked + label:hover::before,
 .side-energy-filter label:hover::before {
     opacity: 1;
+}
+
+.side-brands-filter label:focus,
+.side-energy-filter label:focus {
+    outline: 1px;
+    outline-color: #4D90FE;
+    outline-style: auto;
+    outline-width: 5px;
 }
 
 .side-brands-filter input[type="checkbox"]:disabled + label,

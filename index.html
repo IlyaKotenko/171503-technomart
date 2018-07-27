@@ -5,7 +5,7 @@
         <title>HTML Academy: Техномарт</title>
         <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/min-style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-page-header">
@@ -84,18 +84,28 @@
                         <a href="#" aria-label="Техника">Для стройки</a>
                     </li>
                 </ul>
-                <ul class="slider">
-                    <li class="slider-screen">
-                        <span class="slider-title">Перфораторы</span>
-                        <span class="slider-subtitle">Настоящие мужские игрушки</span>
-                        <a class="global-button slider-button" href="catalog.html">Открыть каталог</a>
-                    </li>
-                    <li class="slider-screen active">
-                        <span class="slider-title">Дрели</span>
-                        <span class="slider-subtitle">Соседям на радость!</span>
-                        <a class="global-button slider-button" href="catalog.html">Открыть каталог</a>
-                    </li>
-                </ul>
+                <div class="slider-wrapper">
+                    <div class="slider-arrow-left"></div>
+                    <div class="slider-arrow-right"></div>
+                    <div class="slider-toggles">
+                        <div>
+                            <div class="toggle slide-1"></div>
+                            <div class="toggle slide-2 active"></div>
+                        </div>
+                    </div>
+                    <ul class="slider">
+                        <li class="slider-screen">
+                            <span class="slider-title">Перфораторы</span>
+                            <span class="slider-subtitle">Настоящие мужские игрушки</span>
+                            <a class="global-button slider-button" href="catalog.html">Открыть каталог</a>
+                        </li>
+                        <li class="slider-screen active">
+                            <span class="slider-title">Дрели</span>
+                            <span class="slider-subtitle">Соседям на радость!</span>
+                            <a class="global-button slider-button" href="catalog.html">Открыть каталог</a>
+                        </li>
+                    </ul>
+                </div>
                 <ul class="offer-categories">
                     <li class="sale-category">
                         <h3>Скидки 50%</h3>
@@ -208,8 +218,7 @@
                 <div class="description">
                     <h2>Компания «Техномарт»</h2>
                     <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-                    <p>Мы можем доставить ваш товар в самые отдалённые точки России!<br>
-                        Техномарт работает со многими транспортными компаниями:
+                    <p class="delivery-title">Мы можем доставить ваш товар в самые отдалённые точки России! Техномарт работает со многими транспортными компаниями:
                     </p>
                     <ul class="delivery-company-list">
                         <li><a href="#">Деловые линии</a></li>
