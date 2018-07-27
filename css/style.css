@@ -2216,11 +2216,6 @@ a.current-page {
     padding-bottom: 6px;
 }
 
-.side-brands-filter input,
-.side-energy-filter input {
-    display: none;
-}
-
 .side-brands-filter label,
 .side-energy-filter label {
     display: block;
@@ -2273,8 +2268,8 @@ a.current-page {
     opacity: 1;
 }
 
-.side-brands-filter label:focus,
-.side-energy-filter label:focus {
+.side-brands-filter input:focus + label,
+.side-energy-filter input:focus + label {
     outline: 1px;
     outline-color: #4D90FE;
     outline-style: auto;
